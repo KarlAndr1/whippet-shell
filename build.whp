@@ -1,0 +1,5 @@
+#!/usr/bin/env whippet
+do
+	cc -O2 -DNO_TESTS -DO_INCLUDE_ASSERTS (filter [indir src] [λ x (endswith @x ".c")])
+	print "Done"
+end
